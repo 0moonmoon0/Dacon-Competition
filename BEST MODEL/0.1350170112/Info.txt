@@ -1,0 +1,29 @@
+OFFICE CPU - Baseline CNN (only color masking, no blur, 0.5 normalization) 
+
+CFG = {
+    'IMG_SIZE':128,
+    'EPOCHS':75,
+    'LEARNING_RATE':1e-3,
+    'BATCH_SIZE':32,
+    'SEED':42
+}
+
+(image, clip_hist_percent=0.025):
+lower = np.array([22,40,0])
+upper = np.array([85,255,245])
+
+CNN outliers - Removed bunch of image outliers based on 물린다 + Duplicate data
+CAToutliers -> First two cases
+train_df = train_df[train_df['CO2관측치'] > 0]
+train_df = train_df[train_df['최근분무량'] >= 0]
+
+Did interpolate missing data
+
+CATmodel = CatBoostRegressor(verbose=1, n_estimators=10000,  eval_metric='MAE', early_stopping_rounds=50)
+bestTest = 3.622445885
+bestIteration = 5810
+
+ANN Kernel (100, 50, 25, 1) / learning_rate = 0.001 / patience = 50 / epoch = 1000 / batch = 32
+loss: 2.9382 - mean_absolute_error: 2.9383 - val_loss: 3.6461 - val_mean_absolute_error: 3.6461
+
+CNN * 0.65 + CATBOOST *0.25 + ANN * 0.1 

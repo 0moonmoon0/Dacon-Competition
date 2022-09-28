@@ -1,0 +1,39 @@
+3.png   (0, 0, 0) (90, 255, 245)
+5.png   (22, 0, 0) (90, 255 ,245)
+6.jpg   (22, 0, 0) (95, 255 ,245)
+7.png   (22, 0, 0) (95, 255 ,223)
+
+Best Output (22, 20, 0) (85, 255, 245)
+
+
+
+Image Outliers (From 물린다)
+
+CASE05_21, 22, 23
+CASE07_7, 8
+CASE16_3
+CASE23_3 (Delete All)
+CASE45_16, 17
+CASE72_06
+CASE73_10
+CASE59 (Delete All)
+
+Images Outliers (ME!)
+
+CASE 23 (Delete All) (Underweighted)
+CASE 73_10, 14, 2 (Cropped next day)
+CASE 45_16, 17 (Equipment fault, Underweighted)
+CASE 17_02 (Sudden weight decrease)
+CASE 59 (Delete All) (Duplicate)
+CASE 05_21, 22, 23 (Inconsistent weight)
+CASE 9_8 (Sudden weight decrease)
+CASE 16_3 (Underweighted)
+CASE 7_7, 8 (Sudden weight decrease)
+CASE 72_06 (Cropped next day)
+CASE 31_6, 7 (Sudden weight decrease)
+
+Metadata Outliers
+
+CASE 4 (Excessive 최근분무량)
+CASE 10 - 14 (Cumulative 최근분무량)
+Test Data (Cumulative 최근분무량 or unit 최근분무량)
